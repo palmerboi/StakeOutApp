@@ -19,10 +19,10 @@ namespace StakeOut
             var layout = new RelativeLayout();
             Content = layout;
 
-            var aquaBox = new BoxView { Color = Color.Aqua };
-            layout.Children.Add(aquaBox,
-                                        widthConstraint: Constraint.RelativeToParent(parent => parent.Width)
-                                        heightConstraint)
+            ////var aquaBox = new BoxView { Color = Color.Aqua };
+            //layout.Children.Add(aquaBox,
+            //                            widthConstraint: Constraint.RelativeToParent(parent => parent.Width)
+            //                            heightConstraint)
         }
     }
 }

@@ -8,4 +8,6 @@
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
+    <Button Text=" hi" Clicked="Button_Clicked" />
+
 </ContentPage>
