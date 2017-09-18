@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StakeOut.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,13 @@ namespace StakeOut
         public MainPage()
         {
             InitializeComponent();
+
+            Profile profile = new Profile();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("hi", "you are a gay", "thanks");
         }
     }
 }
