@@ -13,7 +13,7 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.MainPage();
+            MainPage = new StakeOut.ProfilePage();
         }
 
         protected override void OnStart()
