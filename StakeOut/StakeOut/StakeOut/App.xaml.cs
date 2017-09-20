@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StakeOut.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,12 @@ namespace StakeOut
 {
     public partial class App : Application
     {
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.StakeSaleForm();
+            MainPage = new StakeOut.Views.ProfilePage();
         }
 
         protected override void OnStart()

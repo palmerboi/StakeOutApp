@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StakeOut.Views.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions ="FillAndExpand">
+            <Label Text="My Profile" TextColor="White" BackgroundColor="Black" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <Image />
+            <Label Text="" x:Name="Name"/>
+            <Label Text="" x:Name="Description"/>
+            <Label Text="Hendon Mob Link:" HorizontalOptions="Center"/>
+            <Label Text="" x:Name="HendonLink"/>
+            <Label Text="Twitter Handle:" HorizontalOptions="Center"/>
+            <Label Text="" VerticalOptions="EndAndExpand" x:Name="TwitterLink" />
+            <Button Text="Edit Profile" BackgroundColor="Green" TextColor="White" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
