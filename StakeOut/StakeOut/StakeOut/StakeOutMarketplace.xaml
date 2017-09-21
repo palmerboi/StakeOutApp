@@ -23,7 +23,7 @@
             
 
             <StackLayout Orientation="Horizontal">
-                <ListView x:Name="ListView" HasUnevenRows="True">
+                <ListView x:Name="ListView" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

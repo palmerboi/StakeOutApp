@@ -12,17 +12,31 @@ namespace StakeOut
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StakeOutMarketplace : ContentPage
-	{
-		public StakeOutMarketplace ()
-		{
-			InitializeComponent ();
 
-           
-            ListView.ItemsSource = new List<Profile>
+        
+	{
+        List<Profile> GetProfile()
+        {
+           return new List<Profile>
             {
                 new Profile{ Name = "bob", ProfilePicture = "http://lorempixel.com/100/100/people/1"},
                 new Profile{ Name = "Red", ProfilePicture = "http://lorempixel.com/100/100/people/2"}
             };
+        }
+        public StakeOutMarketplace ()
+		{
+			InitializeComponent ();
+
+
+           
 		}
-	}
+
+        private void ListView_Refreshing(object sender, EventArgs e)
+        {
+            ListView.ItemsSource = GetProfile();
+            ListView.EndRefresh();
+        }
+
+        
+    }
 }
