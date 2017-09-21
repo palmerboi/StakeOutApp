@@ -23,13 +23,13 @@
             
 
             <StackLayout Orientation="Horizontal">
-                <ListView x:Name="ListView">
+                <ListView x:Name="ListView" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal" Padding="5">
                                     <Image Source="{Binding ProfilePicture}" />
-                                    <StackLayout>
+                                    <StackLayout HorizontalOptions="StartAndExpand">
                                         <Label Text="{Binding Name}"/>
                                         <Label Text="{Binding Stake.stake}" />
                                         
