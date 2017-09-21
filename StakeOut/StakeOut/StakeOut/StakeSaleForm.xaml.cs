@@ -17,7 +17,6 @@ namespace StakeOut
         public StakeSaleForm()
         {
             InitializeComponent();
-            Stake stake = new Stake();
             btn.Clicked += Btn_Clicked;
         }
 
@@ -29,6 +28,10 @@ namespace StakeOut
           //  var MyEntry = new Entry { IsPassword = true };
             var answer = await DisplayAlert("Confirm Stake?", "", "Yes", "No");
             Debug.WriteLine("Answer: " + answer);
+            if(answer.Equals(true))
+            {
+                Stake stake = new Stake { s}
+            }
         }
 
 
