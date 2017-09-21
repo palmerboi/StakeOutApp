@@ -21,12 +21,12 @@
                    HeightRequest="60" />
       
 
-            <Entry Keyboard="Text" Placeholder="Tournament"  />
-            <Entry Keyboard="Text" Placeholder="Venue" />
+            <Entry Keyboard="Text" Placeholder="Tournament" x:Name="tournament" />
+            <Entry Keyboard="Text" Placeholder="Venue" x:Name="venue" />
                 
             <StackLayout Spacing="0">
                 <Label Text="DeadLine Date" />
-                <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" />
+                <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" x:Name="date" MinimumDate="{x:Static sys:DateTime.Today}" />
              </StackLayout>
 
             <StackLayout Orientation="Horizontal" Padding="13, 0" >
@@ -37,11 +37,11 @@
            
             <StackLayout Orientation="Horizontal" Spacing="0">
                 <Label Text="$" TextColor="Black" VerticalOptions="Center" FontSize="Medium" />
-                <Entry Keyboard="Numeric" Placeholder="Total Stake" HorizontalOptions="FillAndExpand" />    
+                <Entry Keyboard="Numeric" Placeholder="Total Stake" HorizontalOptions="FillAndExpand" x:Name="money"/>    
             </StackLayout>
          
                 <Label Text="Comments" />
-                <Editor VerticalOptions="FillAndExpand"/>
+                <Editor VerticalOptions="FillAndExpand" x:Name="comments"/>
 
             <StackLayout Padding="0, 13" >
                 <Button Text="Create Stake" x:Name="btn" BackgroundColor="Red" Clicked="Btn_Clicked" TextColor="White" VerticalOptions="End"

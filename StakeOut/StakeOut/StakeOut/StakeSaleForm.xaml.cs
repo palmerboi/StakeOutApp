@@ -24,14 +24,28 @@ namespace StakeOut
 
         async void Btn_Clicked(object sender, EventArgs e)
         {
-           
-          //  var MyEntry = new Entry { IsPassword = true };
-            var answer = await DisplayAlert("Confirm Stake?", "", "Yes", "No");
-            Debug.WriteLine("Answer: " + answer);
-            if(answer.Equals(true))
+           if(tournament.Text == null || venue.Text == null || date.Date == null || money.Text == null)
             {
-                Stake stake = new Stake { s}
+               await DisplayAlert("Blank Fields", "Please fill out neccessary sections","Ok");
             }
+            else
+            {
+                var answer = await DisplayAlert("Confirm Stake?", "", "Yes", "No");
+                Debug.WriteLine("Answer: " + answer);
+                if (answer.Equals(true))
+                {
+                    Stake stake = new Stake
+                    {
+                        tournament = tournament.Text,
+                        venue = venue.Text,
+                        date = date.Date,
+                        markup = slider.Value,
+                        stake = money.Text,
+                        comments = comments.Text
+                    };
+                }
+            }
+           
         }
 
 
