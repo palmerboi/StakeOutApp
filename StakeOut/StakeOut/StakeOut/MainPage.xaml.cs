@@ -14,7 +14,7 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            Profile profile = new Profile();
+            StakeOutMarketplace market = new StakeOutMarketplace();
         }
 
         private void Button_Clicked(object sender, EventArgs e)

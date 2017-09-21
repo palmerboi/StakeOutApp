@@ -4,7 +4,17 @@
              x:Class="StakeOut.StakeOutMarketplace">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Label Text="Buy Stakes" 
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   IsVisible="True"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="60" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
