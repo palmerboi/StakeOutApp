@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StakeOut.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace StakeOut
 		public StakeOutMarketplace ()
 		{
 			InitializeComponent ();
+
+           
+            ListView.ItemsSource = new List<Profile>
+            {
+                new Profile{ Name = "bob", ProfilePicture = "http://lorempixel.com/100/100/people/1"},
+                new Profile{ Name = "Red", ProfilePicture = "http://lorempixel.com/100/100/people/2"}
+            };
 		}
 	}
 }
