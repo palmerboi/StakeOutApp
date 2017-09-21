@@ -1,18 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
+           
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StakeOut.StakeSaleForm">
+             x:Class="StakeOut.StakeSaleForm"
+             Title="Stake Sales Form">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Keyboard="Text" Placeholder="Tournament" />
+        <StackLayout Spacing="10">
+        <Label Text="Sell Stakes" 
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   IsVisible="True"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="60" />
+      
+
+            <Entry Keyboard="Text" Placeholder="Tournament"  />
             <Entry Keyboard="Text" Placeholder="Venue" />
-            <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy"/>
-            <Slider x:Name="slider" Minimum="1" Maximum="2"/>
-            <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N2}'}" />
-            <Entry Keyboard="Numeric" Placeholder="Total Stake $"/>
-            <Editor VerticalOptions="FillAndExpand"/>
+                
+            <StackLayout Spacing="0">
+                <Label Text="DeadLine Date" />
+                <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" />
+             </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="13, 0" >
+                <Label Text="Markup" TextColor="Black"/>
+                <Slider x:Name="slider" Maximum="2" Minimum="1" HorizontalOptions="FillAndExpand"/>
+                <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N1}'}" />
+            </StackLayout>
+           
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label Text="$" TextColor="Black" VerticalOptions="Center" FontSize="Medium" />
+                <Entry Keyboard="Numeric" Placeholder="Total Stake" HorizontalOptions="FillAndExpand" />    
+            </StackLayout>
+         
+                <Label Text="Comments" />
+                <Editor VerticalOptions="FillAndExpand"/>
+
+            <StackLayout Padding="0, 13" >
+                <Button Text="Create Stake" x:Name="btn" BackgroundColor="Red" Clicked="Btn_Clicked" TextColor="White" VerticalOptions="End"
+                    HorizontalOptions="Center" WidthRequest="150" HeightRequest="55"/>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

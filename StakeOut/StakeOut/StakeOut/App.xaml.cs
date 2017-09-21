@@ -13,7 +13,8 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.ProfilePage();
+            MainPage = new StakeOut.StakeSaleForm();
+
         }
 
         protected override void OnStart()
