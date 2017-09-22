@@ -37,6 +37,11 @@ namespace StakeOut
             ListView.EndRefresh();
         }
 
-        
+        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var venues = venue.Items[venue.SelectedIndex];
+            
+            DisplayAlert("Selection", venues, "OK");
+        }
     }
 }

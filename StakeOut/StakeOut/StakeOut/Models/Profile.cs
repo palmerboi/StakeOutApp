@@ -14,6 +14,6 @@ namespace StakeOut.Models
         public string TwitterLink { get; set; }
         public int Pin { get; set; }
         public string ProfilePicture { get; set; }
-        public List<Stake> stakelist;
+        public List<Stake> Stakelist;
     }
 }
