@@ -13,7 +13,7 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.StakeSaleForm();
+            MainPage = new StakeOut.ProfileCreation();
 
         }
 
