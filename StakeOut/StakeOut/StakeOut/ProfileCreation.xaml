@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage                           
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StakeOut.ProfileCreation"
+             Title="Profile Creation">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Profile Creation Page" 
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   IsVisible="True"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="60"/>
+
+            <ic:CircleImage 
+                x:Name="profilePicture"
+                WidthRequest="100"
+                HeightRequest="100"
+                Aspect="AspectFill"
+                Source="https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                />
+
+            <Entry Keyboard="Text" Placeholder="Enter Full Name" x:Name="name"/>
+            <Entry Keyboard="Email" Placeholder="Enter email" x:Name="email" />
+            <Entry Keyboard="Url" Placeholder="HendenMob link" x:Name="hendonMobLink" />
+            <Entry Keyboard="Url" Placeholder="Twitter link" x:Name="twitterLink" />
+
+            <StackLayout Orientation="Horizontal" Padding="13,0">
+                <Label Text="Date of Birth" TextColor="Black" VerticalOptions="Center"/>
+                <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" x:Name="dob" 
+                            MaximumDate="{x:Static sys:DateTime.Today}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <Entry Keyboard="Numeric" Placeholder="Enter Pin" IsPassword="True" x:Name="pin" />
+            <Label Text="Description" />
+            <Editor VerticalOptions="FillAndExpand" x:Name="description" />
+
+            <StackLayout Padding="0, 13" >
+                <Button Text="Create profile" x:Name="btn" BackgroundColor="Red" Clicked="Btn_Clicked" TextColor="White" VerticalOptions="End"
+                    HorizontalOptions="Center" WidthRequest="150" HeightRequest="55"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
