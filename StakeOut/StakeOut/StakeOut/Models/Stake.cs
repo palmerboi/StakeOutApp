@@ -14,6 +14,6 @@ namespace StakeOut.Models
         public float markup { get; set; }
         public float stake { get; set; }
         public string comments { get; set; }
-        public Profile profile;
+        public Profile profile { get; set; }
     }
 }

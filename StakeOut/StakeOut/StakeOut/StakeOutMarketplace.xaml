@@ -39,10 +39,10 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="5">
-                                    <Image Source="{Binding ProfilePicture}" />
+                                    <Image Source="{Binding profile.ProfilePicture}" />
                                     <StackLayout HorizontalOptions="StartAndExpand">
-                                        <Label Text="{Binding Name}"/>
-                                        <Label Text="{Binding Stake.stake}" />
+                                        <Label Text="{Binding profile.Name}"/>
+                                        <Label Text="{Binding stake}" />
                                         
                                     </StackLayout>
                                     <Button Text="Expand"/>

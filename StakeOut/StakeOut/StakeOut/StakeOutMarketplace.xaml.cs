@@ -15,25 +15,24 @@ namespace StakeOut
 
         
 	{
-        List<Profile> GetProfile()
+        List<Stake> GetStake()
         {
-           return new List<Profile>
+           return new List<Stake>
             {
-                new Profile{ Name = "bob", ProfilePicture = "http://lorempixel.com/100/100/people/1"},
-                new Profile{ Name = "Red", ProfilePicture = "http://lorempixel.com/100/100/people/2"}
+                new Stake{ profile =  new Profile{Name = "Bob" , ProfilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000 },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000 }
             };
         }
         public StakeOutMarketplace ()
 		{
 			InitializeComponent ();
+            ListView.ItemsSource = GetStake();
 
-
-           
-		}
+        }
 
         private void ListView_Refreshing(object sender, EventArgs e)
         {
-            ListView.ItemsSource = GetProfile();
+            ListView.ItemsSource = GetStake();
             ListView.EndRefresh();
         }
 
