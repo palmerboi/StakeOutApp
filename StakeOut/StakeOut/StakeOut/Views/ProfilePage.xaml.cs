@@ -23,7 +23,19 @@ namespace StakeOut.Views
                                     description = "Veeerrry Niiiceee Poker Player!!!",
                                     hendonMobLink = "Borat Sagdiyev",
                                     twitterLink = "@Borat",
-                                    profilePicture = "http://lorempixel.com/100/100/people/1"};
+                                    profilePicture = "http://lorempixel.com/300/300/people"};
+
+            Name.Text = profile.name;
+            Description.Text = profile.description;
+            ProfilePic.Source = profile.profilePicture;
+            HendonLink.Text = profile.hendonMobLink;
+            TwitterLink.Text = profile.twitterLink;
+
 		}
-	}
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditProfilePage());
+        }
+    }
 }
