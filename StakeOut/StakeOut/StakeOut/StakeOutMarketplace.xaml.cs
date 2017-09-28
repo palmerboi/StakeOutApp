@@ -19,8 +19,8 @@ namespace StakeOut
         {
            return new List<Stake>
             {
-                new Stake{ profile =  new Profile{Name = "Bob" , ProfilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000 },
-                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000 }
+                new Stake{ profile =  new Profile{Name = "Bob" , ProfilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" }
             };
         }
         public StakeOutMarketplace ()

@@ -40,9 +40,10 @@
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="5">
                                     <Image Source="{Binding profile.ProfilePicture}" />
-                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
                                         <Label Text="{Binding profile.Name}"/>
                                         <Label Text="{Binding stake}" />
+                                        <Label Text="{Binding venue}" />
                                         
                                     </StackLayout>
                                     <Button Text="Expand"/>
