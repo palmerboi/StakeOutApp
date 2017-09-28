@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StakeOut.StakeOutPINLogin">
+    <ContentPage.Content>
+        <Grid RowSpacing="-3" ColumnSpacing="-3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="@drawable/sandwich" HorizontalOptions="CenterAndExpand" VerticalOptions="End" WidthRequest="150" HeightRequest="150" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="3"/>
+            <Label Text="Enter your PIN" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="7"/>
+            <Entry Keyboard="Numeric" x:Name="xNamePin" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="5" IsPassword="true"/>
+            <Label Text="Forgot your PIN?" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="7"/>
+            <Button Text="Enter" Clicked="PINEnter_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3"/>
+            <Label Text="" Grid.Row="12" Grid.Column="12" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StakeOut.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,16 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.StakeSaleForm();
+            MainPage = new StakeOut.StakeOutPINLogin();
+            Profile testPerson = new Profile
+            {
+                name = null,
+                description = null,
+                hendonMobLink = null,
+                twitterLink = null,
+                pin = 8888,
+                profilePicture = null
+            };
 
         }
 

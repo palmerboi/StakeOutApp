@@ -22,5 +22,10 @@ namespace StakeOut
         {
             DisplayAlert("hi", "you are a gay", "thanks");
         }
+
+        public static implicit operator MainPage(StakeOutPINLogin v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
