@@ -5,7 +5,15 @@
              x:Class="StakeOut.Views.EditProfilePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Entry Placeholder="Name"/>
+                <Entry Placeholder="Description"/>
+                <Entry Placeholder="HendonMob name"/>
+                <Entry Placeholder="Twitter Handle"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button Text="Done" Clicked="Button_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
