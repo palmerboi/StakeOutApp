@@ -22,8 +22,18 @@
       
 
             <Entry Keyboard="Text" Placeholder="Tournament" x:Name="tournament" />
-            <Entry Keyboard="Text" Placeholder="Venue" x:Name="venue" />
-                
+
+            <Picker x:Name="venue" Title="Venue" SelectedIndexChanged="Picker_SelectedIndexChanged" >
+                <Picker.Items>
+                    <x:String> Auckland</x:String>
+                    <x:String> Wellington</x:String>
+                    <x:String> ChristChurch</x:String>
+                    <x:String> Hamilton</x:String>
+                    <x:String> Queenstown</x:String>
+                    <x:String> Dunedin</x:String>
+                </Picker.Items>
+            </Picker>
+
             <StackLayout Spacing="0">
                 <Label Text="DeadLine Date" />
                 <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" x:Name="date" MinimumDate="{x:Static sys:DateTime.Today}" />

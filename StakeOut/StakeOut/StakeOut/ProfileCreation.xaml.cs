@@ -13,9 +13,9 @@ namespace StakeOut
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ProfileCreation : ContentPage
 	{
-		public ProfileCreation ()
+		public ProfileCreation()
 		{
-			InitializeComponent ();
+			InitializeComponent();
             btn.Clicked += Btn_Clicked;
 		}
 

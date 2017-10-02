@@ -20,11 +20,16 @@ namespace StakeOut
             btn.Clicked += Btn_Clicked;
         }
 
+        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var venues = venue.Items[venue.SelectedIndex];
 
+            DisplayAlert("Selection", venues, "OK");
+        }
 
         async void Btn_Clicked(object sender, EventArgs e)
         {
-           if(tournament.Text == null || venue.Text == null || date.Date == null || money.Text == null)
+           if(tournament.Text == null || venue.Items == null || date.Date == null || money.Text == null)
             {
                await DisplayAlert("Blank Fields", "Please fill out neccessary sections","Ok");
             }
@@ -37,7 +42,7 @@ namespace StakeOut
                     Stake stake = new Stake
                     {
                         tournament = tournament.Text,
-                        venue = venue.Text,
+                      //  venue = venue.Items,
                         date = date.Date,
                         markup = slider.Value,
                         stake = money.Text,
