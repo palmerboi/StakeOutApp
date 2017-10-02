@@ -40,7 +40,7 @@
                 <DatePicker Date="{x:Static sys:DateTime.Today}" Format="dd MMM yyyy" x:Name="dob" 
                             MaximumDate="{x:Static sys:DateTime.Today}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
-            <Entry Keyboard="Numeric" Placeholder="Enter pin" IsPassword="True" x:Name="pin" />
+            <Entry Keyboard="Numeric" Placeholder="Enter Pin" IsPassword="True" x:Name="pin" />
             <Label Text="Description" />
             <Editor VerticalOptions="FillAndExpand" x:Name="description" />
 

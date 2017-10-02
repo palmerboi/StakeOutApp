@@ -10,18 +10,18 @@ using Xamarin.Forms.Xaml;
 
 namespace StakeOut
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ProfileCreation : ContentPage
-	{
-		public ProfileCreation()
-		{
-			InitializeComponent();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProfileCreation : ContentPage
+    {
+        public ProfileCreation()
+        {
+            InitializeComponent();
             btn.Clicked += Btn_Clicked;
-		}
+        }
 
         async void Btn_Clicked(object sender, EventArgs e)
         {
-            if(profilePicture.Source == null || name.Text == null || email.Text == null || dob.Date == null || pin.Text == null )
+            if (profilePicture.Source == null || name.Text == null || email.Text == null || dob.Date == null || pin.Text == null)
             {
                 await DisplayAlert("Blank Fields", "Please fill out neccessary sections", "Ok");
 
@@ -29,11 +29,11 @@ namespace StakeOut
             else
             {
                 var answer = await DisplayAlert("Confirm Profile?", "", "Yes", "No");
-                if(answer.Equals(true))
+                if (answer.Equals(true))
                 {
                     Profile profile = new Profile
                     {
-                      //  profilePicture = profilePicture.Source,
+                        //  profilePicture = profilePicture.Source,
                         name = name.Text,
                         email = email.Text,
                         hendonMobLink = hendonMobLink.Text,
