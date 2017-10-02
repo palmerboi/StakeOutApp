@@ -17,6 +17,8 @@ namespace StakeOut
 		{
 			InitializeComponent();
             btn.Clicked += Btn_Clicked;
+            
+
 		}
 
         async void Btn_Clicked(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace StakeOut
                 {
                     Profile profile = new Profile
                     {
-                      //  profilePicture = profilePicture.Source,
+                        profilePicture = profilePicture.Source,
                         name = name.Text,
                         email = email.Text,
                         hendonMobLink = hendonMobLink.Text,
