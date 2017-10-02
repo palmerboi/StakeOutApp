@@ -15,7 +15,6 @@ namespace StakeOut
             InitializeComponent();
 
             Profile profile = new Profile();
-               
         }
 
         private void Button_Clicked(object sender, EventArgs e)
