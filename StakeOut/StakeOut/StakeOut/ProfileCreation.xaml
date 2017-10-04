@@ -42,7 +42,7 @@
             </StackLayout>
             <Entry Keyboard="Numeric" Placeholder="Enter pin" IsPassword="True" x:Name="pin" />
             <Label Text="Description" />
-            <Editor VerticalOptions="FillAndExpand" x:Name="description" />
+            <Editor VerticalOptions="FillAndExpand" x:Name="Description" />
 
             <StackLayout Padding="0, 13" >
                 <Button Text="Create profile" x:Name="btn" BackgroundColor="Red" Clicked="Btn_Clicked" TextColor="White" VerticalOptions="End"

@@ -13,10 +13,13 @@ namespace StakeOut
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ProfileCreation : ContentPage
 	{
-		public ProfileCreation()
+        
+
+        public ProfileCreation()
 		{
 			InitializeComponent();
             btn.Clicked += Btn_Clicked;
+            Profile profile = new Profile {profilePicture = .Source };
             
 
 		}
@@ -35,14 +38,14 @@ namespace StakeOut
                 {
                     Profile profile = new Profile
                     {
-                        profilePicture = profilePicture.Source,
+                        profilePicture = ProfilePicture.Source,
                         name = name.Text,
                         email = email.Text,
                         hendonMobLink = hendonMobLink.Text,
                         twitterLink = twitterLink.Text,
                         dob = dob.Date,
                         pin = pin.Text,
-                        description = description.Text
+                        description = Description.Text
                     };
                 }
             }
