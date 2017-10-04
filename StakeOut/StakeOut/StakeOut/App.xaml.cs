@@ -15,7 +15,7 @@ namespace StakeOut
         {
             InitializeComponent();
 
-            MainPage = new StakeOut.Views.ProfilePage();
+            MainPage = new StakeOut.ProfileCreation();
         }
 
         protected override void OnStart()

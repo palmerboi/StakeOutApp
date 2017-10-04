@@ -9,10 +9,12 @@ namespace StakeOut.Models
     class Profile
     {
         public string name { get; set; }
+        public string email { get; set; }
+        public DateTime dob;
         public string description { get; set; }
         public string hendonMobLink { get; set; }
         public string twitterLink { get; set; }
-        public int pin { get; set; }
+        public string pin { get; set; }
         public string profilePicture { get; set; }
         public List<Stake> stakelist;
     }
