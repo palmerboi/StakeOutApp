@@ -17,5 +17,10 @@ namespace StakeOut.Models
         public string pin { get; set; }
         public string profilePicture { get; set; }
         public List<Stake> stakelist;
+
+        public void stakeGetter()
+        {
+
+        }
     }
 }
