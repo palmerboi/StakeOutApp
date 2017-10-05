@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:StakeOut"
-             x:Class="StakeOut.Views.MainPage">
-
+             xmlns:local="clr-namespace:StakeOut.Views;assembly=StakeOut"
+             x:Class="StakeOut.Views.MainPage"
+             Title="Stakeout">
+    <local:StakeOutMarketplace/>
+    <NavigationPage Title="My Profile">
+        <x:Arguments>
+            <local:ProfilePage/>
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>

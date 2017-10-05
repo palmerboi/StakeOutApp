@@ -13,9 +13,6 @@ namespace StakeOut.Views
         public MainPage()
         {
             InitializeComponent();
-
-            this.Children.Add(new NavigationPage(new StakeOut.Views.ProfilePage()));
-            this.Children.Add(new StakeOut.Views.StakeOutMarketplace());
         }
     }
 }
