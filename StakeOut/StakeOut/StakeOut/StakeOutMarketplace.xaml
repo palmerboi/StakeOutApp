@@ -25,6 +25,7 @@
                     <Picker.Items>
                         <x:String> Auckland</x:String>
                         <x:String> Wellington</x:String>
+                        <x:String> Hamilton</x:String>
                     </Picker.Items>
                        
                 </Picker>

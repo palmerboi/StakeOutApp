@@ -35,28 +35,7 @@ namespace StakeOut
         {
             stakeList.ItemsSource = GetStake();
 
-            List<Stake> L = GetStake();
-            List<Stake> LL = new List<Stake>();
-            foreach (var el in L)
-            {
-
-                if (el.venue == "Auckland")
-                {
-                    LL.Clear();
-                    stakeList.ClearValue(ListView.ItemsSourceProperty);
-                    LL.Add(el);
-                    this.stakeList.ItemsSource = LL;
-
-                }
-                if (el.venue == "Wellington")
-                {
-                    LL.Clear();
-                    stakeList.ClearValue(ListView.ItemsSourceProperty);
-                    LL.Add(el);
-                    this.stakeList.ItemsSource = LL;
-
-                }
-            };
+         
 
             stakeList.EndRefresh();
         }
@@ -67,7 +46,34 @@ namespace StakeOut
             
             DisplayAlert("Selection", venues, "OK");
 
+            List<Stake> L = GetStake();
+            List<Stake> LL = new List<Stake>();
+            foreach (var el in L)
+            {
 
+                if (el.venue == venues)
+                {
+                    LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+
+                }
+                if (el.venue == venues)
+                {
+                    LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+                }
+                if (el.venue == venues)
+                {
+                    LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+                }
+            };
 
 
         }
