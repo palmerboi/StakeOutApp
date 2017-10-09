@@ -19,7 +19,7 @@ namespace StakeOut
 		{
 			InitializeComponent();
             btn.Clicked += Btn_Clicked;
-            Profile profile = new Profile {profilePicture = .Source };
+          //  Profile profile = new Profile {profilePicture = .Source };
             
 
 		}
@@ -38,14 +38,14 @@ namespace StakeOut
                 {
                     Profile profile = new Profile
                     {
-                        profilePicture = ProfilePicture.Source,
+                       // profilePicture = ProfilePicture.Source,
                         name = name.Text,
                         email = email.Text,
                         hendonMobLink = hendonMobLink.Text,
                         twitterLink = twitterLink.Text,
                         dob = dob.Date,
                         pin = pin.Text,
-                        description = Description.Text
+                      //  description = Description.Text
                     };
                 }
             }
