@@ -26,14 +26,39 @@ namespace StakeOut
         public StakeOutMarketplace ()
 		{
 			InitializeComponent ();
-            ListView.ItemsSource = GetStake();
+            stakeList.ItemsSource = GetStake();
 
         }
 
+
         private void ListView_Refreshing(object sender, EventArgs e)
         {
-            ListView.ItemsSource = GetStake();
-            ListView.EndRefresh();
+            stakeList.ItemsSource = GetStake();
+
+            List<Stake> L = GetStake();
+            List<Stake> LL = new List<Stake>();
+            foreach (var el in L)
+            {
+
+                if (el.venue == "Auckland")
+                {
+                    LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+
+                }
+                if (el.venue == "Wellington")
+                {
+                    LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+
+                }
+            };
+
+            stakeList.EndRefresh();
         }
 
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,6 +66,13 @@ namespace StakeOut
             var venues = venue.Items[venue.SelectedIndex];
             
             DisplayAlert("Selection", venues, "OK");
+
+
+
+
         }
+
+        
     }
+        
 }
