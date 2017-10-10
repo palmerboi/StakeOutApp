@@ -19,17 +19,17 @@ namespace StakeOut
             InitializeComponent();
             btn.Clicked += Btn_Clicked;
         }
+        
+        //private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    var venues = venue.Items[venue.SelectedIndex];
 
-        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var venues = venue.Items[venue.SelectedIndex];
-
-            DisplayAlert("Selection", venues, "OK");
-        }
+        //    DisplayAlert("Selection", venues, "OK");
+        //}
 
         async void Btn_Clicked(object sender, EventArgs e)
         {
-           if(tournament.Text == null || venue.Items == null || date.Date == null || money.Text == null)
+           if(tournament.Text == null || /*venue.Items == null ||*/ date.Date == null || money.Text == null)
             {
                await DisplayAlert("Blank Fields", "Please fill out neccessary sections","Ok");
             }

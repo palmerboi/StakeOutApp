@@ -22,8 +22,8 @@
       
 
             <Entry Keyboard="Text" Placeholder="Tournament" x:Name="tournament" />
-
-            <StackLayout>
+            
+            <!--<StackLayout>
                 <Picker x:Name="venue" Title="Venue" SelectedIndexChanged="Picker_SelectedIndexChanged" >
                     <Picker.Items>
                         <x:String>Auckland</x:String>
@@ -34,7 +34,7 @@
                         <x:String>Dunedin</x:String>
                     </Picker.Items>
                 </Picker>
-            </StackLayout>
+            </StackLayout>-->
             
             <StackLayout Spacing="0">
                 <Label Text="DeadLine Date" />
