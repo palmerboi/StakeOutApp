@@ -20,7 +20,22 @@ namespace StakeOut
            return new List<Stake>
             {
                 new Stake{ profile =  new Profile{Name = "Bob" , ProfilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
-                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" }
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Borat" , ProfilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
+                new Stake{ profile =  new Profile{Name = "Shaq" , ProfilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
+                new Stake{ profile =  new Profile{Name = "Dyane Jonson" , ProfilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
+                new Stake{ profile =  new Profile{Name = "Ruben" , ProfilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" },
+                 new Stake{ profile =  new Profile{Name = "Bob" , ProfilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Red" , ProfilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{Name = "Borat" , ProfilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
+                new Stake{ profile =  new Profile{Name = "Shaq" , ProfilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
+                new Stake{ profile =  new Profile{Name = "Dyane Jonson" , ProfilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
+                new Stake{ profile =  new Profile{Name = "Ruben" , ProfilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" }
+
             };
         }
         public StakeOutMarketplace ()
@@ -50,29 +65,29 @@ namespace StakeOut
             List<Stake> LL = new List<Stake>();
             foreach (var el in L)
             {
-
+                
                 if (el.venue == venues)
                 {
-                    LL.Clear();
+                   // LL.Clear();
                     stakeList.ClearValue(ListView.ItemsSourceProperty);
                     LL.Add(el);
                     this.stakeList.ItemsSource = LL;
 
                 }
-                if (el.venue == venues)
-                {
-                    LL.Clear();
-                    stakeList.ClearValue(ListView.ItemsSourceProperty);
-                    LL.Add(el);
-                    this.stakeList.ItemsSource = LL;
-                }
-                if (el.venue == venues)
-                {
-                    LL.Clear();
-                    stakeList.ClearValue(ListView.ItemsSourceProperty);
-                    LL.Add(el);
-                    this.stakeList.ItemsSource = LL;
-                }
+                //if (el.venue == venues)
+                //{
+                //    LL.Clear();
+                //    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                //    LL.Add(el);
+                //    this.stakeList.ItemsSource = LL;
+                //}
+                //if (el.venue == venues)
+                //{
+                //    LL.Clear();
+                //    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                //    LL.Add(el);
+                //    this.stakeList.ItemsSource = LL;
+                //}
             };
 
 

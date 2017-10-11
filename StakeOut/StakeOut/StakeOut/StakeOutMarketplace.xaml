@@ -26,15 +26,18 @@
                         <x:String> Auckland</x:String>
                         <x:String> Wellington</x:String>
                         <x:String> Hamilton</x:String>
+                        <x:String> Dunedin</x:String>
+                        <x:String> Queenstown </x:String>
+                        <x:String> Christchurch</x:String>
                     </Picker.Items>
                        
                 </Picker>
                     
             </StackLayout>
 
-            
 
-            <StackLayout Orientation="Horizontal">
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
                 <ListView x:Name="stakeList" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
                     <ListView.ItemTemplate>
                         <DataTemplate>
