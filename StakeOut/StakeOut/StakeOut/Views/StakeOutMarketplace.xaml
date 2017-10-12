@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+<ContentPage xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="StakeOut.Views.StakeOutMarketplace"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              Title="Marketplace">
-    
+
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Buy Stakes" 
@@ -24,6 +25,10 @@
                     <Picker.Items>
                         <x:String>Auckland</x:String>
                         <x:String>Wellington</x:String>
+                        <x:String>Hamilton</x:String>
+                        <x:String>Dunedin</x:String>
+                        <x:String>Queenstown</x:String>
+                        <x:String>Christchurch</x:String>
                     </Picker.Items>
 
                 </Picker>
@@ -32,15 +37,15 @@
 
 
 
-            <StackLayout Orientation="Horizontal">
-                <ListView x:Name="ListView" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <ListView x:Name="stakeList" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="5">
                                     <Image Source="{Binding profile.profilePicture}" />
                                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                                        <Label Text="{Binding profile.name}"/>
+                                        <Label Text="{Binding profile.Name}"/>
                                         <Label Text="{Binding stake}" />
                                         <Label Text="{Binding venue}" />
 

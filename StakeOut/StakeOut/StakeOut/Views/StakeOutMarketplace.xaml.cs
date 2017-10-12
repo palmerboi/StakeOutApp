@@ -12,27 +12,47 @@ namespace StakeOut.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StakeOutMarketplace : ContentPage
-    {
 
+
+    {
         List<Stake> GetStake()
         {
             return new List<Stake>
             {
                 new Stake{ profile =  new Profile{name = "Bob" , profilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" }
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Borat" , profilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
+                new Stake{ profile =  new Profile{name = "Shaq" , profilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
+                new Stake{ profile =  new Profile{name = "Dyane Jonson" , profilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
+                new Stake{ profile =  new Profile{name = "Ruben" , profilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" },
+                 new Stake{ profile =  new Profile{name = "Bob" , profilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
+                new Stake{ profile =  new Profile{name = "Borat" , profilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
+                new Stake{ profile =  new Profile{name = "Shaq" , profilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
+                new Stake{ profile =  new Profile{name = "Dyane Jonson" , profilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
+                new Stake{ profile =  new Profile{name = "Ruben" , profilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" }
+
             };
         }
         public StakeOutMarketplace()
         {
             InitializeComponent();
-            ListView.ItemsSource = GetStake();
+            stakeList.ItemsSource = GetStake();
 
         }
 
+
         private void ListView_Refreshing(object sender, EventArgs e)
         {
-            ListView.ItemsSource = GetStake();
-            ListView.EndRefresh();
+            stakeList.ItemsSource = GetStake();
+
+
+
+            stakeList.EndRefresh();
         }
 
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,6 +60,40 @@ namespace StakeOut.Views
             var venues = venue.Items[venue.SelectedIndex];
 
             DisplayAlert("Selection", venues, "OK");
+
+            List<Stake> L = GetStake();
+            List<Stake> LL = new List<Stake>();
+            foreach (var el in L)
+            {
+
+                if (el.venue == venues)
+                {
+                    // LL.Clear();
+                    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                    LL.Add(el);
+                    this.stakeList.ItemsSource = LL;
+
+                }
+                //if (el.venue == venues)
+                //{
+                //    LL.Clear();
+                //    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                //    LL.Add(el);
+                //    this.stakeList.ItemsSource = LL;
+                //}
+                //if (el.venue == venues)
+                //{
+                //    LL.Clear();
+                //    stakeList.ClearValue(ListView.ItemsSourceProperty);
+                //    LL.Add(el);
+                //    this.stakeList.ItemsSource = LL;
+                //}
+            };
+
+
         }
+
+
     }
+
 }

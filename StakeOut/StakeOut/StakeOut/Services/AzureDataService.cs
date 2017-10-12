@@ -2,6 +2,7 @@
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
+using StakeOut.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,34 +13,31 @@ namespace StakeOut.Services
 {
     class AzureDataService
     {
-        public MobileServiceClient MobileService { get; set; }
-        IMobileServiceSyncTable profileTable;
+        private static AzureDataService instance;
+        private MobileServiceClient client;
+        private IMobileServiceTable<Profile> ProfileTab;
 
-        public async Task Initialize()
+        private AzureDataService()
         {
-            //Create our client
-            MobileService = new MobileServiceClient("http://stakeoutapp.azurewebsites.net");
-
-            const string path = "syncstore.db";
-            //setup our local sqlite store and intialize our table
-            var store = new MobileServiceSQLiteStore(path);
-            store.DefineTable();
-            await MobileService.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
-
-            //Get our sync table that will call out to azure
-            profileTable = MobileService.GetSyncTable();
+            this.client = new MobileServiceClient("http://stakeoutapp.azurewebsites.net");
         }
 
-        public async Task<IEnumerable> GetProfiles()
+        public MobileServiceClient AzureClient
         {
+            get { return client; }
         }
 
-        public async Task AddProfile(bool madeAtHome)
+        public static AzureDataService AzureManagerInstance
         {
-        }
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AzureDataService();
+                }
 
-        public async Task SyncProfiles()
-        {
+                return instance;
+            }
         }
     }
 }
