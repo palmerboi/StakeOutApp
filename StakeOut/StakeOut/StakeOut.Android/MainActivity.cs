@@ -37,30 +37,30 @@ namespace StakeOut.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            CrossPayPalManager.Init(new PayPalConfiguration(
-                    PayPalEnvironment.NoNetwork,
-                    "Your PayPal ID from Aa6OJkWTeZ2TfqZOytnZSDV7XVQ4vtuYmoRDUeDsLInxMjfPKMveLGZR1u4mxRIMQD9SxN_5xv0zhLPM"
-                    )
-            {
-                //If you want to accept credit cards
-                AcceptCreditCards = true,
-                //Your business name
-                MerchantName = "Test Store",
-                //Your privacy policy Url
-                MerchantPrivacyPolicyUri = "https://www.example.com/privacy",
-                //Your user agreement Url
-                MerchantUserAgreementUri = "https://www.example.com/legal",
+            //CrossPayPalManager.Init(new PayPalConfiguration(
+            //        PayPalEnvironment.NoNetwork,
+            //        "Your PayPal ID from Aa6OJkWTeZ2TfqZOytnZSDV7XVQ4vtuYmoRDUeDsLInxMjfPKMveLGZR1u4mxRIMQD9SxN_5xv0zhLPM"
+            //        )
+            //{
+            //    //If you want to accept credit cards
+            //    AcceptCreditCards = true,
+            //    //Your business name
+            //    MerchantName = "Test Store",
+            //    //Your privacy policy Url
+            //    MerchantPrivacyPolicyUri = "https://www.example.com/privacy",
+            //    //Your user agreement Url
+            //    MerchantUserAgreementUri = "https://www.example.com/legal",
 
-                // OPTIONAL - ShippingAddressOption (Both, None, PayPal, Provided)
-                ShippingAddressOption = ShippingAddressOption.Both,
+            //    // OPTIONAL - ShippingAddressOption (Both, None, PayPal, Provided)
+            //    ShippingAddressOption = ShippingAddressOption.Both,
 
-                // OPTIONAL - Language: Default languege for PayPal Plug-In
-                Language = "eng",
+            //    // OPTIONAL - Language: Default languege for PayPal Plug-In
+            //    Language = "eng",
 
-                // OPTIONAL - PhoneCountryCode: Default phone country code for PayPal Plug-In
-                PhoneCountryCode = "52",
-            }
-            );
+            //    // OPTIONAL - PhoneCountryCode: Default phone country code for PayPal Plug-In
+            //    PhoneCountryCode = "52",
+            //}
+            //);
             ImageCircleRenderer.Init();
             LoadApplication(new App());
         }

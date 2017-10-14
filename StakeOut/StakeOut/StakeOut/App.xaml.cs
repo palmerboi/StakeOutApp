@@ -14,8 +14,8 @@ namespace StakeOut
         public App()
         {
             InitializeComponent();
-
-            MainPage = new StakeOut.StakeSaleForm();
+            
+            MainPage = new StakeOut.RestService();
         }
 
         protected override void OnStart()

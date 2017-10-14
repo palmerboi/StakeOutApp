@@ -4,7 +4,18 @@
              x:Class="StakeOut.RestService">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <StackLayout Orientation="Horizontal" >
+                <Button Text="Add" Clicked="OnAdd" />
+                <Button Text="Update" Clicked="OnUpdate" HorizontalOptions="CenterAndExpand" />
+                <Button Text="Delete" Clicked="OnDelete" />
+            </StackLayout>
+            <ListView x:Name="postsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

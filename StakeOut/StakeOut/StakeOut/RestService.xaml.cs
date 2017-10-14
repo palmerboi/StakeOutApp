@@ -25,7 +25,7 @@ namespace StakeOut
     {
         private const string Url = "https://jsonplaceholder.typicode.com/posts";
         private HttpClient _client = new HttpClient();
-        private ObservableCollection<RestService> _posts;
+        private ObservableCollection<Post> _posts;
 
         public RestService()
         {
@@ -37,11 +37,23 @@ namespace StakeOut
             base.OnAppearing();
             {
                 var content = await _client.GetStringAsync(Url);
-                var posts = JsonConvert.DeserializeObject<List<RestService>(content);
-                _posts = new ObservableCollection<RestService>(posts);
+                var posts = JsonConvert.DeserializeObject<List<Post>>(content);
+
+                _posts = new ObservableCollection<Post>(posts);
                 postsListView.ItemsSource = _posts;
                 base.OnAppearing();
             }
+        }
+        void OnAdd(object sender, System.EventArgs e)
+        {
+        }
+
+        void OnUpdate(object sender, System.EventArgs e)
+        {
+        }
+
+        void OnDelete(object sender, System.EventArgs e)
+        {
         }
     }
 }
