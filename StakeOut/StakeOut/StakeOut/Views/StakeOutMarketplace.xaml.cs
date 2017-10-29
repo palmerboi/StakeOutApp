@@ -21,21 +21,10 @@ namespace StakeOut.Views
             {
                 new Stake{ profile =  new Profile{name = "Bob" , profilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
                 new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
                 new Stake{ profile =  new Profile{name = "Borat" , profilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
                 new Stake{ profile =  new Profile{name = "Shaq" , profilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
-                new Stake{ profile =  new Profile{name = "Dyane Jonson" , profilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
-                new Stake{ profile =  new Profile{name = "Ruben" , profilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" },
-                 new Stake{ profile =  new Profile{name = "Bob" , profilePicture = "http://lorempixel.com/100/100/people/1" }, stake = 5000, venue = "Auckland" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 5000, venue = "Wellington" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 100, venue = "Wellington" },
-                new Stake{ profile =  new Profile{name = "Red" , profilePicture = "http://lorempixel.com/100/100/people/2" }, stake = 3000, venue = "Wellington" },
-                new Stake{ profile =  new Profile{name = "Borat" , profilePicture = "http://lorempixel.com/100/100/people/3" }, stake = 3000, venue = "Queenstown" },
-                new Stake{ profile =  new Profile{name = "Shaq" , profilePicture = "http://lorempixel.com/100/100/people/4" }, stake = 3000, venue = "Hamilton" },
-                new Stake{ profile =  new Profile{name = "Dyane Jonson" , profilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
-                new Stake{ profile =  new Profile{name = "Ruben" , profilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" }
-
+                new Stake{ profile =  new Profile{name = "Dwayne Johnson" , profilePicture = "http://lorempixel.com/100/100/people/5" }, stake = 3000, venue = "Christchurch" },
+                new Stake{ profile =  new Profile{name = "Reuben" , profilePicture = "http://lorempixel.com/100/100/people/6" }, stake = 3000, venue = "Dunedin" },
             };
         }
         public StakeOutMarketplace()

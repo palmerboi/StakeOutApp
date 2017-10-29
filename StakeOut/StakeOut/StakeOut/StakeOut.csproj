@@ -51,6 +51,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\OtherProfilePage.xaml.cs">
+      <DependentUpon>OtherProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VouchForm.xaml.cs">
+      <DependentUpon>VouchForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PinPage.xaml.cs">
       <DependentUpon>PinPage.xaml</DependentUpon>
     </Compile>
@@ -163,6 +169,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OtherProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\VouchForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

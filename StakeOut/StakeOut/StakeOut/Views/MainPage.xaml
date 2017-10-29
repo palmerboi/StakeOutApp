@@ -7,7 +7,7 @@
     <local:StakeOutMarketplace/>
     <NavigationPage Title="My Profile">
         <x:Arguments>
-            <local:ProfilePage/>
+            <local:OtherProfilePage/>
         </x:Arguments>
     </NavigationPage>
     <local:StakeSaleForm/>
