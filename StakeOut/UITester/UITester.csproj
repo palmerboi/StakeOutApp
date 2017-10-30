@@ -28,6 +28,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
       <Private>False</Private>
@@ -47,6 +50,33 @@
       <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net45\PayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalAdaptivePaymentsSDK, Version=2.15.117.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalAdaptivePaymentsSDK.2.15.117\lib\net20\PayPalAdaptivePaymentsSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalCoreSDK, Version=1.7.0.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalCoreSDK.1.7.0\lib\net45\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Quickblox.Sdk, Version=1.2.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.7\lib\net45\Quickblox.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Quickblox.Sdk.Platform.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.7\lib\net45\Quickblox.Sdk.Platform.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Quickblox.Sdk.Platform.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.7\lib\net45\Quickblox.Sdk.Platform.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.FabControl, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Refractored.FloatingActionButtonForms.2.1.0\lib\netstandard1.0\Refractored.FabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\rda.SocketsForPCL.1.2.2\lib\net45\Sockets.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin.Abstractions, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\rda.SocketsForPCL.1.2.2\lib\net45\Sockets.Plugin.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="Xamarin.UITest, Version=1.3.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.UITest.1.3.8\lib\Xamarin.UITest.dll</HintPath>
@@ -57,6 +87,7 @@
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
