@@ -2,47 +2,32 @@
 
 StakeOut is a xamarin.forms cross-platform mobile poker staking application., if you dont know what poker staking is here is a link explaining it: https://hackernoon.com/the-basics-of-staking-in-poker-2e51d68715c1
 
-Our application
-
+Our application allows poker staking to take place in the mobile environment, enabling conveniant, secure buying and selling of poker stakes.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-## Prerequisites
-
-What things you need to install the software and how to install them
-
-Give examples
-## Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-Give the example
-And repeat
+In order to load our code you must have Visual Studio 2015 or newer with Xamarin installed, as well as an android device/emulator running Android 4.0 or newer to run it
 
 until finished
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To deploy this on a system just have an android device plugged in and in developer mode, running android 4.0 or newer. Or just use the android device emulator available in visual studio.
 
 ## Built With
 
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
+Xamarin - The cross platform framework used
+C# - The programming language utilised
+Azure - The cloud based database platform for the app
 
+## Authors/Agile Team
 
-## Authors
-
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
+Reuben Palmer - Product Owner
+Callum Drennan - Scrum Master
+Alex Alnaib - Developer
+Triden Richards - Developer
 
 ## Acknowledgments
 
-Cheers to Ol'Bazzer and Awais for their support during the project
+Cheers to Ol'Bazzer and Awais for their support during the project.
