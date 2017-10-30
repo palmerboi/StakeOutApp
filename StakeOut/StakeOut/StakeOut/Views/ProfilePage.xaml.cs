@@ -17,7 +17,6 @@ namespace StakeOut.Views
         {
             Profile profile;
 
-
             InitializeComponent();
 
             profile = new Profile
