@@ -17,16 +17,16 @@ To deploy this on a system just have an android device plugged in and in develop
 
 ## Built With
 
-Xamarin - The cross platform framework used
-C# - The programming language utilised
-Azure - The cloud based database platform for the app
+* Xamarin - The cross platform framework used
+* C# - The programming language utilised
+* Azure - The cloud based database platform for the app
 
 ## Authors/Agile Team
 
-Reuben Palmer - Product Owner
-Callum Drennan - Scrum Master
-Alex Alnaib - Developer
-Triden Richards - Developer
+* Reuben Palmer - Product Owner
+* Callum Drennan - Scrum Master
+* Alex Alnaib - Developer
+* Triden Richards - Developer
 
 ## Acknowledgments
 
