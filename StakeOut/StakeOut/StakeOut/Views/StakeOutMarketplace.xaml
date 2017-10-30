@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StakeOut.Views.StakeOutMarketplace"
+             Title="Marketplace">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Buy Stakes" 
+                   VerticalOptions="Start"
+                   HorizontalOptions="FillAndExpand"
+                   IsVisible="True"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="60" />
+
+            <StackLayout>
+                <Picker x:Name="venue" Title="Venue" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Auckland</x:String>
+                        <x:String>Wellington</x:String>
+                        <x:String>Hamilton</x:String>
+                        <x:String>Dunedin</x:String>
+                        <x:String>Queenstown</x:String>
+                        <x:String>Christchurch</x:String>
+                    </Picker.Items>
+
+                </Picker>
+
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <ListView x:Name="stakeList" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="5">
+                                    <Image Source="{Binding profile.profilePicture}" />
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding profile.Name}"/>
+                                        <Label Text="{Binding stake}" />
+                                        <Label Text="{Binding venue}" />
+
+                                    </StackLayout>
+                                    <Button Text="Expand"/>
+
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

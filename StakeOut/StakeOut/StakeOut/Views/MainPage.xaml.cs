@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace StakeOut
+namespace StakeOut.Views
+
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {

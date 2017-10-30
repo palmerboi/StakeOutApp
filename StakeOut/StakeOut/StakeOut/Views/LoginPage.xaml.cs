@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StakeOut
+namespace StakeOut.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage : TabbedPage
+    public partial class LoginPage : ContentPage
     {
-        public TabbedPage()
+        public LoginPage()
         {
             InitializeComponent();
-        }
-
-        public static implicit operator Page(TabbedPage v)
-        {
-            throw new NotImplementedException();
         }
     }
 }
