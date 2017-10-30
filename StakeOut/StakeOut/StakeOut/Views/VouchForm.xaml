@@ -6,28 +6,6 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
-                <ListView x:Name="stakeList" HasUnevenRows="True" IsPullToRefreshEnabled="True" Refreshing="ListView_Refreshing">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="5">
-                                    <Image Source="{Binding vouchProfile.profilePicture}" />
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                                        <Label Text="{Binding profile.Name}"/>
-                                        <Label Text="{Binding stake}" />
-                                        <Label Text="{Binding venue}" />
-
-                                    </StackLayout>
-                                    <Button Text="Expand"/>
-
-                                </StackLayout>
-
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-
-
             </StackLayout>
             <StackLayout VerticalOptions="End">
                 <Button Text="Return" BackgroundColor="Blue" TextColor="White" Clicked="Button_Clicked" />

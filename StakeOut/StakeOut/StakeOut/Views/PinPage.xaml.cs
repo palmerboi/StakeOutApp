@@ -19,26 +19,26 @@ namespace StakeOut.Views
             InitializeComponent();
         }
 
-        private void PINEnter_Clicked(object sender, EventArgs e)
+        private async void PINEnter_Clicked(object sender, EventArgs e)
         {
             if (xNamePin.Text == null)
             {
-                DisplayAlert("", "Please enter a PIN Code before pressing the Enter button", "Ok");
+                await DisplayAlert("", "Please enter a PIN Code before pressing the Enter button", "Ok");
             }
             else
             {
                 int pin = Int32.Parse(xNamePin.Text);
                 if (pin == 8888)
                 {
-                    DisplayAlert("Success!", "You have been successfully logged in", "Log in");
+                    await DisplayAlert("Success!", "You have been successfully logged in", "Log in");
                 }
-                else if (failAttempts >= 3)
+                else if (failAttempts > 3)
                 {
-                    DisplayAlert("Failed!", "You have had 3 failed attempts. Please try again next time!", "Ok...");
+                    await DisplayAlert("Failed!", "You have had 3 failed attempts. Please try again next time!", "Ok...");
                 }
                 else
                 {
-                    DisplayAlert("Wrong PIN!", "You have entered the wrong PIN. Please try again", "Ok");
+                    await DisplayAlert("Wrong PIN!", "You have entered the wrong PIN. Please try again", "Ok");
                     ++failAttempts;
                 }
             }
