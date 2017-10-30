@@ -1,4 +1,4 @@
-StakeOutApp
+# StakeOutApp
 
 StakeOut is a xamarin.forms cross-platform mobile poker staking application., if you dont know what poker staking is here is a link explaining it: https://hackernoon.com/the-basics-of-staking-in-poker-2e51d68715c1
 
